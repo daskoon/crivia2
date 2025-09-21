@@ -30,7 +30,7 @@
       "purpose": "any"
     },
     {
-      "src": "/generated.png"
+      "src": "/generated_image.png"
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
