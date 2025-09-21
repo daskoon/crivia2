@@ -30,9 +30,9 @@
       "purpose": "any"
     },
     {
-      "src": "/generated_image.png"
+      "src": "https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/jped",
       "purpose": "any"
     },
     {
