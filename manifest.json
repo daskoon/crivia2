@@ -1,0 +1,59 @@
+{
+  "name": "Crivia",
+  "short_name": "Crivia",
+  "description": "40 comprehensive questions (doubled from original 20)17 detailed categories covering every aspect of Crelly's content3 difficulty levels with proper distribution (9 Easy, 18 Medium, 13 Hard)Deep research integration from multiple verified sources",
+  "start_url": "Crivia2.vercel.app",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#8b5cf6",
+  "theme_color": "#8B5CF6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg",
+      "sizes": "384x384",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "categories": [
+    "games"
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Start Quiz",
+      "url": "./?start=true",
+      "icons": [
+        {
+          "src": "https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Crelly Trivia Game"
+    }
+  ],
+  "id": "Crivia"
+}
