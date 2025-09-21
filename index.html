@@ -83,6 +83,12 @@
     </script>
 </head>
 <body>
+    <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
+
     <div id="app" class="app">
         <!-- Welcome Screen -->
         <div id="welcome-screen" class="screen active">
