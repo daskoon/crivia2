@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The ultimate trivia game about Crelly the cow VTuber! Test your knowledge with 40+ questions across 17 categories.">
+    <meta name="theme-color" content="#8B5CF6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Crelly Trivia">
+    <meta name="msapplication-TileColor" content="#8B5CF6">
+    
+    <title>Crelly Trivia - The Ultimate Cow VTuber Quiz</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg">
+    <link rel="apple-touch-icon" href="https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkNyZWxseSBUcml2aWEgLSBUaGUgVWx0aW1hdGUgQ293IFZUdWJlciBRdWl6IiwKICAic2hvcnRfbmFtZSI6ICJDcmVsbHkgVHJpdmlhIiwKICAiZGVzY3JpcHRpb24iOiAiVGVzdCB5b3VyIGtub3dsZWRnZSBhYm91dCBDcmVsbHkgdGhlIGNvdyBWVHViZXIgd2l0aCAwdmVyIDQwIHF1ZXN0aW9ucyBhY3Jvc3MgMTcgY2F0ZWdvcmllcy4iLAogICJzdGFydF91cmwiOiAiLi8iLAogICJzY29wZSI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzFGMjEzMyIsCiAgInRoZW1lX2NvbG9yIjogIiM4QjVDRjYiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdC1wcmltYXJ5IiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiaHR0cHM6Ly92My5mYWwubWVkaWEvZmlsZXMvbW9ua2V5L2ItTG02cm1KbndEdUxnR1dWWTA0Mi5qcGVnIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9qcGVnIiwKICAgICAgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIgogICAgfSwKICAgIHsKICAgICAgInNyYyI6ICJodHRwczovL3YzLmZhbC5tZWRpYS9maWxlcy9tb25rZXkvYi1MbTZybUpud0R1TGdHV1ZZMDQyLmpwZWciLAogICAgICAic2l6ZXMiOiAiMzg0eDM4NCIsCiAgICAgICJ0eXBlIjogImltYWdlL2pwZWciLAogICAgICAicHVycG9zZSI6ICJhbnkiCiAgICB9LAogICAgewogICAgICAic3JjIjogImh0dHBzOi8vdjMuZmFsLm1lZGlhL2ZpbGVzL21vbmtleS9iLUxtNnJtSm53RHVMZ0dXVlkwNDIuanBlZyIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvanBlZyIsCiAgICAgICJwdXJwb3NlIjogImFueSIKICAgIH0KICBdLAogICJjYXRlZ29yaWVzIjogWyJnYW1lcyIsICJlbnRlcnRhaW5tZW50IiwgImVkdWNhdGlvbiJdLAogICJsYW5nIjogImVuIiwKICAiZGlyIjogImx0ciIsCiAgICJwcmVmZXJfcmVsYXRlZF9hcHBsaWNhdGlvbnMiOiBmYWxzZSwKICAic2hvcnRjdXRzIjogWwogICAgewogICAgICAibmFtZSI6ICJTdGFydCBRdWl6IiwKICAgICAgInVybCI6ICIuLz9zdGFydD10cnVlIiwKICAgICAgImljb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJzcmMiOiAiaHR0cHM6Ly92My5mYWwubWVkaWEvZmlsZXMvbW9ua2V5L2ItTG02cm1KbndEdUxnR1dWWTA0Mi5qcGVnIiwKICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIgogICAgICAgIH0KICAgICAgXQogICAgfQogIF0sCiAgInNjcmVlbnNob3RzIjogWwogICAgewogICAgICAic3JjIjogImh0dHBzOi8vdjMuZmFsLm1lZGlhL2ZpbGVzL21vbmtleS9iLUxtNnJtSm53RHVMZ0dXVlkwNDIuanBlZyIsCiAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvanBlZyIsCiAgICAgICJmb3JtX2ZhY3RvciI6ICJ3aWRlIiwKICAgICAgImxhYmVsIjogIkNyZWxseSBUcml2aWEgR2FtZSIKICAgIH0KICBdCn0=">
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swCode = `
+                    const CACHE_NAME = 'crelly-trivia-v1';
+                    const urlsToCache = [
+                        '/',
+                        '/style.css',
+                        '/app.js',
+                        'https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg'
+                    ];
+
+                    self.addEventListener('install', event => {
+                        event.waitUntil(
+                            caches.open(CACHE_NAME)
+                                .then(cache => cache.addAll(urlsToCache))
+                        );
+                        self.skipWaiting();
+                    });
+
+                    self.addEventListener('fetch', event => {
+                        event.respondWith(
+                            caches.match(event.request)
+                                .then(response => {
+                                    if (response) {
+                                        return response;
+                                    }
+                                    return fetch(event.request).catch(() => {
+                                        if (event.request.destination === 'document') {
+                                            return caches.match('/');
+                                        }
+                                    });
+                                })
+                        );
+                    });
+
+                    self.addEventListener('activate', event => {
+                        event.waitUntil(
+                            caches.keys().then(cacheNames => {
+                                return Promise.all(
+                                    cacheNames.map(cacheName => {
+                                        if (cacheName !== CACHE_NAME) {
+                                            return caches.delete(cacheName);
+                                        }
+                                    })
+                                );
+                            })
+                        );
+                        self.clients.claim();
+                    });
+                `;
+                
+                const blob = new Blob([swCode], { type: 'application/javascript' });
+                const swUrl = URL.createObjectURL(blob);
+                
+                navigator.serviceWorker.register(swUrl)
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="app" class="app">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <header class="welcome-header">
+                <div class="hero-section">
+                    <div class="floating-elements">
+                        <div class="floating-cow">🐮</div>
+                        <div class="floating-ball">🎱</div>
+                        <div class="floating-star">⭐</div>
+                    </div>
+                    <img src="https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg" alt="Crelly Trivia Icon" class="app-icon">
+                    <h1 class="app-title">Crelly Trivia</h1>
+                    <p class="app-subtitle">The Ultimate Cow VTuber Quiz Experience</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Questions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">17</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Difficulty Levels</div>
+                    </div>
+                </div>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <span class="feature-icon">🏆</span>
+                        <span>Test your Crelly knowledge</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📱</span>
+                        <span>Works offline</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span>Detailed explanations</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="welcome-actions">
+                <button id="start-game-btn" class="btn btn--primary btn--lg">
+                    <span>Start Game</span>
+                    <span class="btn-icon">🎮</span>
+                </button>
+                <button id="settings-btn" class="btn btn--secondary">
+                    <span class="btn-icon">⚙️</span>
+                    Settings
+                </button>
+            </div>
+        </div>
+
+        <!-- Settings Screen -->
+        <div id="settings-screen" class="screen">
+            <header class="screen-header">
+                <button id="back-to-welcome" class="btn btn--outline btn--sm" aria-label="Back to welcome">
+                    <span class="btn-icon">←</span>
+                    Back
+                </button>
+                <h2>Game Settings</h2>
+                <div></div>
+            </header>
+
+            <div class="settings-content">
+                <div class="form-group">
+                    <label class="form-label" for="difficulty-select">Difficulty Level</label>
+                    <select id="difficulty-select" class="form-control">
+                        <option value="all">All Difficulties</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="category-select">Category</label>
+                    <select id="category-select" class="form-control">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="question-count">Number of Questions</label>
+                    <select id="question-count" class="form-control">
+                        <option value="5">5 Questions</option>
+                        <option value="10" selected>10 Questions</option>
+                        <option value="15">15 Questions</option>
+                        <option value="20">20 Questions</option>
+                        <option value="40">All Questions (40)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" id="sound-toggle" checked>
+                        <span class="checkbox-custom"></span>
+                        Sound Effects
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="checkbox-custom"></span>
+                        Dark Mode
+                    </label>
+                </div>
+
+                <div class="settings-actions">
+                    <button id="start-from-settings" class="btn btn--primary btn--lg btn--full-width">
+                        Start Quiz
+                    </button>
+                    <button id="reset-progress" class="btn btn--outline">Reset All Progress</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div id="question-screen" class="screen">
+            <header class="question-header">
+                <div class="progress-info">
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <div class="question-counter">
+                        <span id="current-question">1</span> of <span id="total-questions">10</span>
+                    </div>
+                </div>
+                <div class="score-display">
+                    Score: <span id="current-score">0</span>
+                </div>
+            </header>
+
+            <div class="question-content">
+                <div class="question-meta">
+                    <span id="question-category" class="status status--info">Category</span>
+                    <span id="question-difficulty" class="status status--warning">Medium</span>
+                </div>
+                
+                <div class="question-bubble">
+                    <div class="mascot">🐮</div>
+                    <div class="question-text" id="question-text">
+                        Question text will appear here...
+                    </div>
+                </div>
+
+                <div class="answers-grid">
+                    <button class="answer-btn" data-index="0">
+                        <span class="answer-letter">A</span>
+                        <span class="answer-text">Answer A</span>
+                    </button>
+                    <button class="answer-btn" data-index="1">
+                        <span class="answer-letter">B</span>
+                        <span class="answer-text">Answer B</span>
+                    </button>
+                    <button class="answer-btn" data-index="2">
+                        <span class="answer-letter">C</span>
+                        <span class="answer-text">Answer C</span>
+                    </button>
+                    <button class="answer-btn" data-index="3">
+                        <span class="answer-letter">D</span>
+                        <span class="answer-text">Answer D</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Answer Feedback Screen -->
+        <div id="feedback-screen" class="screen">
+            <div class="feedback-content">
+                <div id="feedback-result" class="feedback-result">
+                    <div class="result-icon">✅</div>
+                    <div class="result-text">Correct!</div>
+                </div>
+
+                <div class="feedback-explanation">
+                    <h3>Explanation</h3>
+                    <p id="explanation-text">Explanation will appear here...</p>
+                </div>
+
+                <div class="score-update">
+                    <div class="score-change">+10 points</div>
+                    <div class="total-score">Total: <span id="feedback-score">10</span></div>
+                </div>
+
+                <button id="next-question-btn" class="btn btn--primary btn--lg">
+                    Next Question
+                </button>
+            </div>
+            <div id="confetti" class="confetti hidden"></div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-content">
+                <div class="results-header">
+                    <div class="final-score">
+                        <div class="score-circle">
+                            <svg class="score-progress" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="8" fill="none"/>
+                                <circle id="score-circle" cx="50" cy="50" r="45" stroke="#8B5CF6" stroke-width="8" 
+                                        fill="none" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283"/>
+                            </svg>
+                            <div class="score-text">
+                                <div id="final-percentage">0%</div>
+                                <div class="score-label">Score</div>
+                            </div>
+                        </div>
+                        <h2 id="performance-rating">Great Job!</h2>
+                        <p id="rating-message">You know your Crelly trivia!</p>
+                    </div>
+
+                    <div class="results-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">Correct Answers</span>
+                            <span id="correct-count" class="summary-value">0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Total Questions</span>
+                            <span id="total-answered" class="summary-value">0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Final Score</span>
+                            <span id="final-score-display" class="summary-value">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="play-again-btn" class="btn btn--primary btn--lg">
+                        Play Again
+                    </button>
+                    <button id="change-settings-btn" class="btn btn--secondary">
+                        Change Settings
+                    </button>
+                    <button id="view-leaderboard-btn" class="btn btn--outline">
+                        View Stats
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard Screen -->
+        <div id="leaderboard-screen" class="screen">
+            <header class="screen-header">
+                <button id="back-to-results" class="btn btn--outline btn--sm">
+                    <span class="btn-icon">←</span>
+                    Back
+                </button>
+                <h2>Your Statistics</h2>
+                <div></div>
+            </header>
+
+            <div class="leaderboard-content">
+                <div class="stats-section">
+                    <h3>Overall Stats</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-title">Games Played</div>
+                            <div id="games-played" class="stat-value">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-title">Best Score</div>
+                            <div id="best-score" class="stat-value">0%</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-title">Average Score</div>
+                            <div id="avg-score" class="stat-value">0%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements-section">
+                    <h3>Achievements</h3>
+                    <div id="achievements-list" class="achievements-list">
+                        <!-- Achievements will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Screen -->
+        <div id="about-screen" class="screen">
+            <header class="screen-header">
+                <button id="back-from-about" class="btn btn--outline btn--sm">
+                    <span class="btn-icon">←</span>
+                    Back
+                </button>
+                <h2>About</h2>
+                <div></div>
+            </header>
+
+            <div class="about-content">
+                <div class="about-section">
+                    <h3>About Crelly</h3>
+                    <p>Crelly is a chaotic cow VTuber known for her horror game streams, long Monday streams, and memorable memes like the infamous floor mayo. With over 52K Twitch followers, she's become a beloved part of the VTuber community.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://twitch.tv/crelly" target="_blank" rel="noopener" class="btn btn--outline">
+                            <span class="btn-icon">📺</span>
+                            Twitch
+                        </a>
+                        <a href="https://twitter.com/crelly_" target="_blank" rel="noopener" class="btn btn--outline">
+                            <span class="btn-icon">🐦</span>
+                            Twitter
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h3>App Info</h3>
+                    <p><strong>Version:</strong> 2.0</p>
+                    <p><strong>Last Updated:</strong> September 20, 2025</p>
+                    <p><strong>Questions:</strong> 40+ comprehensive trivia questions</p>
+                    <p><strong>Categories:</strong> 17 different topics</p>
+                </div>
+
+                <div class="about-section">
+                    <h3>Credits</h3>
+                    <p><strong>Model Illustrator:</strong> @nini_macaron</p>
+                    <p><strong>Model Rigger:</strong> @mochimochibubu</p>
+                    <p><strong>App Developer:</strong> AI Assistant</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PWA Install Prompt -->
+        <div id="install-prompt" class="install-prompt hidden">
+            <div class="install-content">
+                <img src="https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg" alt="App Icon" class="install-icon">
+                <div class="install-text">
+                    <h3>Install Crelly Trivia</h3>
+                    <p>Install this app on your device for the best experience!</p>
+                </div>
+                <div class="install-actions">
+                    <button id="install-btn" class="btn btn--primary">Install</button>
+                    <button id="dismiss-install" class="btn btn--outline">Not Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offline Indicator -->
+        <div id="offline-indicator" class="offline-indicator hidden">
+            <span class="offline-text">📡 Offline Mode</span>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
