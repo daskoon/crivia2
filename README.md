@@ -21,12 +21,12 @@ This app is production-ready and can be converted to Android App Bundle (AAB) fo
 
 ### Method 1: Using PWA Builder (Recommended)
 1. Go to [PWABuilder.com](https://www.pwabuilder.com/)
-2. Enter the app URL: `https://[your-deployed-url]`
+2. Enter the app URL: `https://crivia.vercel.app`
 3. Click "Start" and let it analyze the PWA
 4. Select "Android" platform
 5. Configure settings:
    - App Name: "Crelly Trivia"
-   - Package ID: `com.yourname.crellytrivia`
+   - Package ID: `com.daskoon.crivia`
    - Theme Color: `#8B5CF6`
    - Background Color: `#1F2133`
 6. Download the generated Android project
@@ -39,11 +39,11 @@ This app is production-ready and can be converted to Android App Bundle (AAB) fo
 npm install -g @bubblewrap/cli
 
 # Initialize TWA project
-bubblewrap init --manifest="https://[your-url]/manifest.json"
+bubblewrap init --manifest="https://crivia.vercel.app/manifest.json"
 
 # Configure settings when prompted:
-# - Domain: [your-domain]
-# - Package name: com.yourname.crellytrivia  
+# - Domain: crivia.vercel.app
+# - Package name: com.daskoon.crellytrivia  
 # - App name: Crelly Trivia
 # - LauncherName: Crelly Trivia
 # - Display mode: standalone
@@ -83,12 +83,12 @@ implementation 'androidx.browser:browser:1.4.0'
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="https"
-              android:host="[your-domain]" />
+              android:host="crivia.vercel.app" />
     </intent-filter>
 </activity>
 
 <meta-data android:name="android.support.customtabs.trusted.DEFAULT_URL"
-           android:value="https://[your-domain]" />
+           android:value="https://crivia.vercel.app" />
 <meta-data android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
            android:resource="@color/colorPrimary" />
 <meta-data android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR"
