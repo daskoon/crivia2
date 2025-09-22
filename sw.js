@@ -1,7 +1,7 @@
 // Crelly Trivia PWA Service Worker
-// Version 2.0 - Complete offline functionality
+// Version 2.1 - Updated with local icon paths
 
-const CACHE_NAME = 'crelly-trivia-v2.0';
+const CACHE_NAME = 'crelly-trivia-v2.1';
 const OFFLINE_URL = 'offline.html';
 
 // Resources to cache for offline functionality
@@ -12,7 +12,14 @@ const CACHE_RESOURCES = [
   './app.js',
   './manifest.json',
   './offline.html',
-  'https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg'
+  './icons/icon-512x512.png',
+  './icons/icon-384x384.png',
+  './icons/icon-192x192.png',
+  './icons/icon-152x152.png',
+  './icons/icon-144x144.png',
+  './icons/icon-128x128.png',
+  './icons/icon-96x96.png',
+  './icons/icon-72x72.png'
 ];
 
 // Install event - cache resources
@@ -132,8 +139,8 @@ self.addEventListener('push', event => {
 
   const options = {
     body: event.data ? event.data.text() : 'New trivia questions available!',
-    icon: 'https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg',
-    badge: 'https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg',
+    icon: './icons/icon-192x192.png',
+    badge: './icons/icon-96x96.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -143,12 +150,12 @@ self.addEventListener('push', event => {
       {
         action: 'explore',
         title: 'Play Now',
-        icon: 'https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg'
+        icon: './icons/icon-96x96.png'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: 'https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg'
+        icon: './icons/icon-96x96.png'
       }
     ]
   };

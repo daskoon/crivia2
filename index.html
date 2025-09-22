@@ -13,12 +13,12 @@
     <title>Crelly Trivia - The Ultimate Cow VTuber Quiz</title>
     
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg">
-    <link rel="apple-touch-icon" href="https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg">
-    
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="./icons/icon-192x192.png">
+
     <!-- PWA Manifest -->
-    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkNyZWxseSBUcml2aWEgLSBUaGUgVWx0aW1hdGUgQ293IFZUdWJlciBRdWl6IiwKICAic2hvcnRfbmFtZSI6ICJDcmVsbHkgVHJpdmlhIiwKICAiZGVzY3JpcHRpb24iOiAiVGVzdCB5b3VyIGtub3dsZWRnZSBhYm91dCBDcmVsbHkgdGhlIGNvdyBWVHViZXIgd2l0aCAwdmVyIDQwIHF1ZXN0aW9ucyBhY3Jvc3MgMTcgY2F0ZWdvcmllcy4iLAogICJzdGFydF91cmwiOiAiLi8iLAogICJzY29wZSI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzFGMjEzMyIsCiAgInRoZW1lX2NvbG9yIjogIiM4QjVDRjYiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdC1wcmltYXJ5IiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiaHR0cHM6Ly92My5mYWwubWVkaWEvZmlsZXMvbW9ua2V5L2ItTG02cm1KbndEdUxnR1dWWTA0Mi5qcGVnIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9qcGVnIiwKICAgICAgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIgogICAgfSwKICAgIHsKICAgICAgInNyYyI6ICJodHRwczovL3YzLmZhbC5tZWRpYS9maWxlcy9tb25rZXkvYi1MbTZybUpud0R1TGdHV1ZZMDQyLmpwZWciLAogICAgICAic2l6ZXMiOiAiMzg0eDM4NCIsCiAgICAgICJ0eXBlIjogImltYWdlL2pwZWciLAogICAgICAicHVycG9zZSI6ICJhbnkiCiAgICB9LAogICAgewogICAgICAic3JjIjogImh0dHBzOi8vdjMuZmFsLm1lZGlhL2ZpbGVzL21vbmtleS9iLUxtNnJtSm53RHVMZ0dXVlkwNDIuanBlZyIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvanBlZyIsCiAgICAgICJwdXJwb3NlIjogImFueSIKICAgIH0KICBdLAogICJjYXRlZ29yaWVzIjogWyJnYW1lcyIsICJlbnRlcnRhaW5tZW50IiwgImVkdWNhdGlvbiJdLAogICJsYW5nIjogImVuIiwKICAiZGlyIjogImx0ciIsCiAgICJwcmVmZXJfcmVsYXRlZF9hcHBsaWNhdGlvbnMiOiBmYWxzZSwKICAic2hvcnRjdXRzIjogWwogICAgewogICAgICAibmFtZSI6ICJTdGFydCBRdWl6IiwKICAgICAgInVybCI6ICIuLz9zdGFydD10cnVlIiwKICAgICAgImljb25zIjogWwogICAgICAgIHsKICAgICAgICAgICJzcmMiOiAiaHR0cHM6Ly92My5mYWwubWVkaWEvZmlsZXMvbW9ua2V5L2ItTG02cm1KbndEdUxnR1dWWTA0Mi5qcGVnIiwKICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIgogICAgICAgIH0KICAgICAgXQogICAgfQogIF0sCiAgInNjcmVlbnNob3RzIjogWwogICAgewogICAgICAic3JjIjogImh0dHBzOi8vdjMuZmFsLm1lZGlhL2ZpbGVzL21vbmtleS9iLUxtNnJtSm53RHVMZ0dXVlkwNDIuanBlZyIsCiAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvanBlZyIsCiAgICAgICJmb3JtX2ZhY3RvciI6ICJ3aWRlIiwKICAgICAgImxhYmVsIjogIkNyZWxseSBUcml2aWEgR2FtZSIKICAgIH0KICBdCn0=">
-    
+    <link rel="manifest" href="manifest.json">
+
     <!-- Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
@@ -29,7 +29,9 @@
                         '/',
                         '/style.css',
                         '/app.js',
-                        'https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg'
+                        '/icons/icon-512x512.png',
+                        '/icons/icon-192x192.png',
+                        '/icons/icon-144x144.png'
                     ];
 
                     self.addEventListener('install', event => {
@@ -99,7 +101,7 @@
                         <div class="floating-ball">🎱</div>
                         <div class="floating-star">⭐</div>
                     </div>
-                    <img src="https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg" alt="Crelly Trivia Icon" class="app-icon">
+                    <img src="./icons/icon-512x512.png" alt="Crelly Trivia Icon" class="app-icon">
                     <h1 class="app-title">Crelly Trivia</h1>
                     <p class="app-subtitle">The Ultimate Cow VTuber Quiz Experience</p>
                 </div>
@@ -424,7 +426,7 @@
         <!-- PWA Install Prompt -->
         <div id="install-prompt" class="install-prompt hidden">
             <div class="install-content">
-                <img src="https://v3.fal.media/files/monkey/b-Lm6rmJnwDuLgGWVY042.jpeg" alt="App Icon" class="install-icon">
+                <img src="./icons/icon-192x192.png" alt="App Icon" class="install-icon">
                 <div class="install-text">
                     <h3>Install Crelly Trivia</h3>
                     <p>Install this app on your device for the best experience!</p>
