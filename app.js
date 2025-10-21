@@ -716,9 +716,9 @@ class CrellyTrivia {
         const scoreChange = document.querySelector('.score-change');
         if (isCorrect) {
             const points = this.getPointsForDifficulty(question.difficulty);
-            scoreChange.textContent = `+${points} points`;
+            scoreChange.textContent = `+${points} Croints`;
         } else {
-            scoreChange.textContent = '+0 points';
+            scoreChange.textContent = '+0 Croints';
         }
         
         document.getElementById('feedback-score').textContent = this.gameState.score;

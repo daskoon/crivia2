@@ -1,0 +1,155 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.daskoon.crivia"
+4    android:versionCode="3"
+5    android:versionName="1.1.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:4:22-64
+12
+13    <queries>
+13-->[com.google.androidbrowserhelper:androidbrowserhelper:2.5.0] C:\Users\me\.gradle\caches\8.8\transforms\4812c9d884091dfbf9d3fb8acd43d7bd\transformed\jetified-androidbrowserhelper-2.5.0\AndroidManifest.xml:26:5-34:15
+14        <intent>
+14-->[com.google.androidbrowserhelper:androidbrowserhelper:2.5.0] C:\Users\me\.gradle\caches\8.8\transforms\4812c9d884091dfbf9d3fb8acd43d7bd\transformed\jetified-androidbrowserhelper-2.5.0\AndroidManifest.xml:27:9-33:18
+15            <action android:name="android.intent.action.VIEW" />
+15-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:24:17-69
+15-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:24:25-66
+16
+17            <category android:name="android.intent.category.BROWSABLE" />
+17-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:26:17-78
+17-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:26:27-75
+18
+19            <data android:scheme="https" />
+19-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:27:17-28:56
+19-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:27:23-45
+20        </intent>
+21    </queries>
+22
+23    <permission
+23-->[androidx.core:core:1.9.0] C:\Users\me\.gradle\caches\8.8\transforms\c4a294517c9354b13c2353b4fe37042c\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+24        android:name="com.daskoon.crivia.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+24-->[androidx.core:core:1.9.0] C:\Users\me\.gradle\caches\8.8\transforms\c4a294517c9354b13c2353b4fe37042c\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+25        android:protectionLevel="signature" />
+25-->[androidx.core:core:1.9.0] C:\Users\me\.gradle\caches\8.8\transforms\c4a294517c9354b13c2353b4fe37042c\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+26
+27    <uses-permission android:name="com.daskoon.crivia.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+27-->[androidx.core:core:1.9.0] C:\Users\me\.gradle\caches\8.8\transforms\c4a294517c9354b13c2353b4fe37042c\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+27-->[androidx.core:core:1.9.0] C:\Users\me\.gradle\caches\8.8\transforms\c4a294517c9354b13c2353b4fe37042c\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+28
+29    <application
+29-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:6:5-39:19
+30        android:allowBackup="true"
+30-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:7:9-35
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.9.0] C:\Users\me\.gradle\caches\8.8\transforms\c4a294517c9354b13c2353b4fe37042c\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+32        android:extractNativeLibs="true"
+33        android:icon="@mipmap/ic_launcher"
+33-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:8:9-43
+34        android:label="@string/app_name"
+34-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:9:9-41
+35        android:roundIcon="@mipmap/ic_launcher_round"
+35-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:10:9-54
+36        android:supportsRtl="true"
+36-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:11:9-35
+37        android:theme="@style/Theme.AppCompat.NoActionBar" >
+37-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:12:9-59
+38        <activity
+38-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:14:9-30:20
+39            android:name="com.daskoon.crivia.MainActivity"
+39-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:14:19-47
+40            android:exported="true"
+40-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:15:13-36
+41            android:label="@string/app_name"
+41-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:16:13-45
+42            android:launchMode="singleTask"
+42-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:18:13-44
+43            android:theme="@style/Theme.AppCompat.NoActionBar" >
+43-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:17:13-63
+44            <intent-filter android:autoVerify="true" >
+44-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:19:13-22:29
+44-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:19:28-53
+45                <action android:name="android.intent.action.MAIN" />
+45-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:20:17-69
+45-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:20:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:21:17-77
+47-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:21:27-74
+48            </intent-filter>
+49            <intent-filter android:autoVerify="true" >
+49-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:23:13-29:29
+49-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:23:28-53
+50                <action android:name="android.intent.action.VIEW" />
+50-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:24:17-69
+50-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:24:25-66
+51
+52                <category android:name="android.intent.category.DEFAULT" />
+52-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:25:17-76
+52-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:25:27-73
+53                <category android:name="android.intent.category.BROWSABLE" />
+53-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:26:17-78
+53-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:26:27-75
+54
+55                <data
+55-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:27:17-28:56
+56                    android:host="crivia.vercel.app"
+56-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:28:21-53
+57                    android:scheme="https" />
+57-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:27:23-45
+58            </intent-filter>
+59        </activity>
+60
+61        <meta-data
+61-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:32:9-98
+62            android:name="asset_statements"
+62-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:32:20-51
+63            android:resource="@string/asset_statements" />
+63-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:32:52-95
+64        <meta-data
+64-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:33:9-34:57
+65            android:name="android.support.customtabs.trusted.DEFAULT_URL"
+65-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:33:20-81
+66            android:value="https://crivia.vercel.app" />
+66-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:34:13-54
+67        <meta-data
+67-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:35:9-36:54
+68            android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
+68-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:35:20-86
+69            android:resource="@color/colorPrimary" />
+69-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:36:13-51
+70        <meta-data
+70-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:37:9-38:58
+71            android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR"
+71-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:37:20-90
+72            android:resource="@color/colorPrimaryDark" />
+72-->C:\Users\me\AndroidStudioProjects\crivia2.1\app\src\main\AndroidManifest.xml:38:13-55
+73
+74        <provider
+74-->[androidx.emoji2:emoji2:1.2.0] C:\Users\me\.gradle\caches\8.8\transforms\142c45e8ce47bb77e2a32a16710d02d4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+75            android:name="androidx.startup.InitializationProvider"
+75-->[androidx.emoji2:emoji2:1.2.0] C:\Users\me\.gradle\caches\8.8\transforms\142c45e8ce47bb77e2a32a16710d02d4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+76            android:authorities="com.daskoon.crivia.androidx-startup"
+76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\me\.gradle\caches\8.8\transforms\142c45e8ce47bb77e2a32a16710d02d4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+77            android:exported="false" >
+77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\me\.gradle\caches\8.8\transforms\142c45e8ce47bb77e2a32a16710d02d4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+78            <meta-data
+78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\me\.gradle\caches\8.8\transforms\142c45e8ce47bb77e2a32a16710d02d4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+79                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\me\.gradle\caches\8.8\transforms\142c45e8ce47bb77e2a32a16710d02d4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+80                android:value="androidx.startup" />
+80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\me\.gradle\caches\8.8\transforms\142c45e8ce47bb77e2a32a16710d02d4\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+81            <meta-data
+81-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\me\.gradle\caches\8.8\transforms\f78210eef20305ec4efbcf2d8e623243\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+82                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+82-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\me\.gradle\caches\8.8\transforms\f78210eef20305ec4efbcf2d8e623243\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+83                android:value="androidx.startup" />
+83-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\me\.gradle\caches\8.8\transforms\f78210eef20305ec4efbcf2d8e623243\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+84        </provider>
+85    </application>
+86
+87</manifest>
