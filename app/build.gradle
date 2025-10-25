@@ -2,22 +2,41 @@ plugins {
     id 'com.android.application'
 }
 
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
 android {
+    signingConfigs {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                storeFile file(keystoreProperties['STORE_FILE'])
+                storePassword keystoreProperties['STORE_PASSWORD']
+                keyAlias keystoreProperties['KEY_ALIAS']
+                keyPassword keystoreProperties['KEY_PASSWORD']
+                v1SigningEnabled true
+                v2SigningEnabled true
+            }
+        }
+    }
     namespace 'com.daskoon.crivia'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.daskoon.crivia"
         minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        targetSdk 35
+        versionCode 4
+        versionName "4.0.0"
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
@@ -26,14 +45,9 @@ android {
     }
 }
 
-repositories {
-    google()
-    mavenCentral()
-    maven { url 'https://jitpack.io' }
-}
 
 dependencies {
-    implementation 'com.github.GoogleChrome.custom-tabs-client:customtabs:d07e93fce3'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
     implementation 'androidx.browser:browser:1.4.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
 }

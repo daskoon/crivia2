@@ -29,8 +29,7 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="asset_statements"
-            android:value="[{\"relation\": [\"delegate_permission/common.handle_all_urls\"], \"target\": {\"namespace\": \"web\", \"site\": \"https://crivia.vercel.app\"}}]" />
+        <meta-data android:name="asset_statements" android:resource="@string/asset_statements" />
         <meta-data android:name="android.support.customtabs.trusted.DEFAULT_URL"
             android:value="https://crivia.vercel.app" />
         <meta-data android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
