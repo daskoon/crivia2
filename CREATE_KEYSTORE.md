@@ -65,7 +65,7 @@ I'll create an `assetlinks.json` file for you. You need to:
 3. Deploy to Vercel
 
 The file needs to be accessible at:
-`https://crivia.vercel.app/.well-known/assetlinks.json`
+`https://crivia2.vercel.app/.well-known/assetlinks.json`
 
 **I'll create this file for you in the next step!**
 

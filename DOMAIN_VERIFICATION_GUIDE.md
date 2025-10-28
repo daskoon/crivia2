@@ -2,7 +2,7 @@
 
 ## What You Need to Do:
 
-Your app needs to prove it owns the website `crivia.vercel.app`. This is done with a special file.
+Your app needs to prove it owns the website `crivia2.vercel.app`. This is done with a special file.
 
 ---
 
@@ -56,7 +56,7 @@ Copy EVERYTHING after "SHA256: " (including the colons).
 
 ## Step 3: Add to Your Vercel Website
 
-### Option A: If you have the source code for crivia.vercel.app:
+### Option A: If you have the source code for crivia2.vercel.app:
 
 1. In your Vercel project folder, create this folder structure:
    ```
@@ -87,7 +87,7 @@ You'll need to add this file through your Vercel dashboard or Git repository.
 
 After deploying, visit this URL in your browser:
 ```
-https://crivia.vercel.app/.well-known/assetlinks.json
+https://crivia2.vercel.app/.well-known/assetlinks.json
 ```
 
 You should see your JSON file with your SHA-256 fingerprint.

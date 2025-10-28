@@ -25,13 +25,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https"
-                    android:host="crivia.vercel.app" />
+                    android:host="crivia2.vercel.app" />
             </intent-filter>
         </activity>
 
         <meta-data android:name="asset_statements" android:resource="@string/asset_statements" />
         <meta-data android:name="android.support.customtabs.trusted.DEFAULT_URL"
-            android:value="https://crivia.vercel.app" />
+            android:value="https://crivia2.vercel.app" />
         <meta-data android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
             android:resource="@color/colorPrimary" />
         <meta-data android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR"
