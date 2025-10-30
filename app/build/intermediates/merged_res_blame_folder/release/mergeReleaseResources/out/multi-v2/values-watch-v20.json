@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.daskoon.crivia.app-mergeReleaseResources-20:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\me\\.gradle\\caches\\8.8\\transforms\\0746b951ba56d2fa3a59ea57790e5d31\\transformed\\appcompat-1.6.1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}
