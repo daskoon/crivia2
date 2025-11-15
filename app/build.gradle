@@ -28,15 +28,24 @@ android {
         applicationId "com.daskoon.crivia"
         minSdk 21
         targetSdk 35
-        versionCode 6
-        versionName "6.9"
+        versionCode 7
+        versionName "7.0"
     }
 
     buildTypes {
+        debug {
+            // Debug builds use the default debug keystore
+            minifyEnabled false
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            // Only apply release signing if keystore exists, otherwise use debug
+            if (keystorePropertiesFile.exists()) {
+                signingConfig signingConfigs.release
+            } else {
+                signingConfig signingConfigs.debug
+            }
         }
     }
     compileOptions {
