@@ -4,3 +4,9 @@ node_modules/
 keystore.properties
 local.properties
 .gradle/
+
+# Java downloads
+.java/
+
+# Build reports
+build/reports/
